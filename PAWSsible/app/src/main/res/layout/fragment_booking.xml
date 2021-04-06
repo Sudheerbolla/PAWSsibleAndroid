@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/ten_dp">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/four_dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twenty_two_sp" />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:background="@drawable/bg_edt"
+                android:gravity="center"
+                android:hint="@string/select_booking_date"
+                android:padding="@dimen/four_dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtHourlyPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:padding="@dimen/four_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/seven_dp"
+                    android:layout_weight="1.1"
+                    android:background="@drawable/bg_edt"
+                    android:hint="@string/enter_hours"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/seven_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/seven_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtSubTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="@string/subtotal"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtTaxes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="@string/tax_12"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="@string/grand_total"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/seventeen_sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:text="@string/confirm_booking" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

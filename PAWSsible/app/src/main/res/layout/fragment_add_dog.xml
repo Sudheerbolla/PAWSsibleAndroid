@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDog"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_add" />
+
+            <LinearLayout
+                android:id="@+id/linContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/imgDog"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/ten_dp">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:padding="@dimen/four_dp"
+                    android:text="@string/dog_breed"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/seven_dp"
+                    android:background="@drawable/bg_edt"
+                    android:hint="@string/enter_dog_breed"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/seven_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/seven_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/four_dp"
+                    android:text="@string/description"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/seven_dp"
+                    android:background="@drawable/bg_edt"
+                    android:gravity="start"
+                    android:hint="@string/enter_description_here"
+                    android:minLines="3"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/seven_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/seven_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/txtAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/four_dp"
+                    android:text="@string/age_in_months"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/seven_dp"
+                    android:background="@drawable/bg_edt"
+                    android:hint="@string/enter_age_in_months"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/seven_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/seven_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/txtHourlyPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/four_dp"
+                    android:text="@string/hourly_rate"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/seven_dp"
+                    android:background="@drawable/bg_edt"
+                    android:hint="@string/enter_hourly_rate"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/seven_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/seven_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/txtLikes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/four_dp"
+                    android:text="@string/likes"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtLikes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/seven_dp"
+                    android:background="@drawable/bg_edt"
+                    android:hint="@string/enter_the_likes_of_dog"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/seven_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/seven_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/txtDisLikes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/four_dp"
+                    android:text="@string/dislikes"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtDisLikes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/seven_dp"
+                    android:background="@drawable/bg_edt"
+                    android:hint="@string/enter_the_dislikes_of_the_dog"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/seven_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/seven_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/txtAllergies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/four_dp"
+                    android:text="@string/allergies"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtAllergies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/seven_dp"
+                    android:background="@drawable/bg_edt"
+                    android:hint="@string/enter_the_allergies_of_the_dog"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/seven_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/seven_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/txtImageLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/four_dp"
+                    android:text="@string/image_url"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtImageLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/seven_dp"
+                    android:background="@drawable/bg_edt"
+                    android:hint="@string/enter_picture_of_dog_url"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/seven_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/seven_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linContent"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:text="@string/add_dog" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</layout>

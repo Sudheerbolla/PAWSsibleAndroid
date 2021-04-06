@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDog"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/a" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/four_dp"
+                android:text="Dog Breed: Dog breed name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twenty_two_sp" />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="Description: This a good dog named dao. Its very fluffy, duffy..... Its is very friendly."
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="Age in Months: 23 Months"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtHourlyPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="Hourly Rate: 20 CAD"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtImageLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="Image Link: link for image"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="Active"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtAllergies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="Allergies:\nAllergy1\nAllery2"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp"
+                app:layout_constraintTop_toBottomOf="@id/txtName" />
+
+            <TextView
+                android:id="@+id/txtLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="Likes: \nLike1\nLike2"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp"
+                app:layout_constraintTop_toBottomOf="@id/txtName" />
+
+            <TextView
+                android:id="@+id/txtDisLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="Dislikes: \nLike1\nLike2"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp"
+                app:layout_constraintTop_toBottomOf="@id/txtName" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:text="@string/proceed_booking" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

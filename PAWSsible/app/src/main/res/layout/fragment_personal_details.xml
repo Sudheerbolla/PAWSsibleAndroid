@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/ten_dp">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/four_dp"
+                android:text="Person Name: \nJohn Doe"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twenty_two_sp" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/four_dp"
+                android:text="Email Address: \nJohnDoe@gmail.com"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="About Yourself: \nThis is something"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtUserType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="User Type: \nOwner"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <TextView
+                android:id="@+id/txtPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp"
+                android:text="Phone Number: \n9999999999"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/seventeen_sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

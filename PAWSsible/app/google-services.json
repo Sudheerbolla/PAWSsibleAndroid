@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "803507040030",
+    "firebase_url": "https://pawssible-5d471.firebaseio.com",
+    "project_id": "pawssible-5d471",
+    "storage_bucket": "pawssible-5d471.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803507040030:android:01e6d1ffcbf70308b3a30f",
+        "android_client_info": {
+          "package_name": "com.app.pawssible"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803507040030-6oo5u718ujgsh28bngf4cpsi0hg0ee0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.pawssible",
+            "certificate_hash": "7b7207a7c3773ecf8ecf30756aac6f1dac2081cd"
+          }
+        },
+        {
+          "client_id": "803507040030-isk1ork1abhe1nccdqo65nubs2sb3ur5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC7Qp7s9N896QNpAZrT4j1riTpRbBRCYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803507040030-isk1ork1abhe1nccdqo65nubs2sb3ur5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803507040030:android:89e75c72b9b47e93b3a30f",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803507040030-pm0ct7rqaknk6fl2ol81bt2c8uvjp8n5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "7b7207a7c3773ecf8ecf30756aac6f1dac2081cd"
+          }
+        },
+        {
+          "client_id": "803507040030-isk1ork1abhe1nccdqo65nubs2sb3ur5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC7Qp7s9N896QNpAZrT4j1riTpRbBRCYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803507040030-isk1ork1abhe1nccdqo65nubs2sb3ur5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803507040030:android:ab91f53657087373b3a30f",
+        "android_client_info": {
+          "package_name": "com.pawssible"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803507040030-mjq7krl4qkejdltlke0eakbdnbup5jbd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pawssible",
+            "certificate_hash": "7b7207a7c3773ecf8ecf30756aac6f1dac2081cd"
+          }
+        },
+        {
+          "client_id": "803507040030-isk1ork1abhe1nccdqo65nubs2sb3ur5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC7Qp7s9N896QNpAZrT4j1riTpRbBRCYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803507040030-isk1ork1abhe1nccdqo65nubs2sb3ur5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

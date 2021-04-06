@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPersonalDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/twelve_dp"
+                android:text="@string/personal_details"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twenty_two_sp"
+                app:drawableEndCompat="@drawable/ic_next" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_dp"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/txtBookingHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/twelve_dp"
+                android:text="@string/booking_history"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twenty_two_sp"
+                app:drawableEndCompat="@drawable/ic_next" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_dp"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/txtRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/twelve_dp"
+                android:text="@string/requests"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twenty_two_sp"
+                app:drawableEndCompat="@drawable/ic_next" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_dp"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/txtPersonalQuestionnaire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/twelve_dp"
+                android:text="@string/personal_questionnaire"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                android:textSize="@dimen/twenty_two_sp"
+                app:drawableEndCompat="@drawable/ic_next" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_dp"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/txtTrackCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/twelve_dp"
+                android:text="@string/track_customer"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twenty_two_sp"
+                app:drawableEndCompat="@drawable/ic_next" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_dp"
+                android:background="@color/colorGrey" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten_dp"
+                android:text="@string/logout" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
