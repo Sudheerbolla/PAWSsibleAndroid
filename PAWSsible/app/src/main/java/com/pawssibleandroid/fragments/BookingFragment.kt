@@ -33,6 +33,9 @@ import org.json.JSONObject
 import retrofit2.Call
 import java.util.*
 
+/**
+ * Booking screen
+ */
 class BookingFragment : Fragment(), View.OnClickListener, IParseListener<JsonElement?>,
     DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     private var dogModel: DogModel? = null

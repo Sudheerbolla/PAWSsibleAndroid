@@ -28,6 +28,9 @@ import com.pawssibleandroid.wsutils.WSUtils
 import retrofit2.Call
 import java.util.*
 
+/**
+ * List of bookings and requests for owner
+ */
 class BookingsListFragment : Fragment(), IClickListener, IParseListener<JsonElement?> {
     private var selectedView: View? = null
     private var selectedPos: Int? = -1
@@ -35,6 +38,7 @@ class BookingsListFragment : Fragment(), IClickListener, IParseListener<JsonElem
     private var fragmentBookingBinding: FragmentBookingsListBinding? = null
     private var isRequests = false
     private var mainActivity: MainActivity? = null
+
     override fun onResume() {
         super.onResume()
         if (mainActivity != null) {

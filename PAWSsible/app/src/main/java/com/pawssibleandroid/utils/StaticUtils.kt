@@ -83,23 +83,17 @@ object StaticUtils {
         return RequestBody.create(MEDIA_TYPE_TEXT, jsonObject.toString())
     }
 
+    /**
+     * Converts data as jsonobject acceptable by backend by retrofit
+     */
     fun getRequestBodyJson(jsonObject: JSONObject): RequestBody {
         val MEDIA_TYPE_TEXT: MediaType = CONTENT_TYPE_JSON.toMediaTypeOrNull()!!
         return RequestBody.create(MEDIA_TYPE_TEXT, jsonObject.toString())
     }
 
-    fun copyTextToClipBoard(context: Context, textToCopy: String?) {
-        try {
-            if (clipboard == null) clipboard =
-                context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = ClipData.newPlainText("selectedFilePath", textToCopy)
-            clipboard!!.setPrimaryClip(clip)
-            //            showToast(context, context.getString(R.string.copied_to_clipboard));
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
+    /**
+     * Shows dialog with edittext for email address for forgot password
+     */
     fun forgotPWDialog(
         context: Context,
         layoutInflater: LayoutInflater,
@@ -133,64 +127,10 @@ object StaticUtils {
         builder.show()
     }
 
+    /**
+     * Email validation
+     */
     fun CharSequence?.isValidEmail() =
         !isNullOrEmpty() && Patterns.EMAIL_ADDRESS.matcher(this).matches()
 
-    fun checkWifiOnAndConnected(context: Context): Boolean {
-        val wifiMgr = context.getSystemService(Context.WIFI_SERVICE) as WifiManager
-        return if (wifiMgr.isWifiEnabled) {
-            val wifiInfo = wifiMgr.connectionInfo
-            wifiInfo.networkId != -1
-        } else {
-            false
-        }
-    }
-
-    fun isWifiOn(context: Context): Boolean {
-        val connMgr =
-            context.applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-                ?: return false
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val network = connMgr.activeNetwork ?: return false
-            val capabilities = connMgr.getNetworkCapabilities(network)
-            capabilities != null && capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
-        } else {
-            val networkInfo = connMgr.activeNetworkInfo
-            networkInfo!!.isConnected && networkInfo.type == ConnectivityManager.TYPE_WIFI
-        }
-    }
-
-    fun isPrimaryTextAvailableInClipboard(context: Context): Boolean {
-        if (clipboard == null) clipboard =
-            context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        return clipboard!!.hasPrimaryClip() && clipboard!!.primaryClip != null && clipboard!!.primaryClip!!
-            .getItemAt(0) != null &&
-                !TextUtils.isEmpty(clipboard!!.primaryClip!!.getItemAt(0).text)
-    }
-
-    fun pasteTextToClipBoard(context: Context, textToCopy: String?) {
-        try {
-            if (clipboard == null) clipboard =
-                context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = ClipData.newPlainText("selectedFilePath", textToCopy)
-            clipboard!!.setPrimaryClip(clip)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    val isExternalStorageReadOnly: Boolean
-        get() = Environment.MEDIA_MOUNTED_READ_ONLY == Environment.getExternalStorageState()
-    val isExternalStorageAvailable: Boolean
-        get() = Environment.MEDIA_MOUNTED == Environment.getExternalStorageState()
-
-    fun isMyServiceRunning(serviceClass: Class<*>, context: Context): Boolean {
-        val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-        for (service in manager.getRunningServices(Int.MAX_VALUE)) {
-            if (serviceClass.name == service.service.className) {
-                return true
-            }
-        }
-        return false
-    }
 }

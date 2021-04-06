@@ -27,6 +27,9 @@ import retrofit2.Call
 
 private const val ARG_PARAM1 = "param1"
 
+/**
+ * Add/Edit/Delete dog features are in this screen
+ */
 class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElement?> {
 
     private var dogModel: DogModel? = null
@@ -66,7 +69,7 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
     private fun initComponents() {
         setData()
         fragmentAddDogBinding!!.btnAdd.setOnClickListener(this)
-        fragmentAddDogBinding!!.imgDog.setOnClickListener(this)
+        fragmentAddDogBinding!!.btnDelete.setOnClickListener(this)
     }
 
     companion object {
@@ -79,6 +82,9 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
             }
     }
 
+    /**
+     * Set data
+     */
     private fun setData() {
         if (dogModel != null) {
             fragmentAddDogBinding!!.edtName.setText(dogModel!!.breedName)
@@ -104,12 +110,30 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
     override fun onClick(view: View) {
         when (view.id) {
             R.id.btnAdd -> addDog()
+            R.id.btnDelete -> deleteDog()
             else -> {
             }
         }
     }
 
+    /**
+     * check and add or edit dog
+     */
     private fun addDog() {
+        assignDog()
+        if (fragmentAddDogBinding!!.btnAdd.text.toString().trim()
+                .equals(getString(R.string.add_dog), true)
+        ) {
+            requestForAddDog()
+        } else {
+            requestForEditDog()
+        }
+    }
+
+    /**
+     * method assigning data for api parsing
+     */
+    private fun assignDog() {
         if (dogModel == null) {
             dogModel = DogModel()
         }
@@ -126,15 +150,27 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
                 .isEmpty()
         ) "https://images.dog.ceo/breeds/akita/Akita_Dog.jpg" else fragmentAddDogBinding!!.edtImageLink.text.toString()
             .trim()
-        if (fragmentAddDogBinding!!.btnAdd.text.toString().trim()
-                .equals(getString(R.string.add_dog), true)
-        ) {
-            requestForAddDog()
-        } else {
-            requestForEditDog()
-        }
     }
 
+    /**
+     * API for delete dog
+     */
+    private fun deleteDog() {
+        assignDog()
+        dogModel?.active = false
+        val call: Call<JsonElement> =
+            BaseApplication.instance?.wsClientListener!!.updateDog(getRequestBodyObject())
+        WSCallBacksListener().requestForJsonObject(
+            mainActivity,
+            WSUtils.REQ_FOR_EDIT_DOG,
+            call,
+            this
+        )
+    }
+
+    /**
+     * API for add dog
+     */
     private fun requestForAddDog() {
         val call: Call<JsonElement> =
             BaseApplication.instance?.wsClientListener!!.addDog(getRequestBodyObject())
@@ -146,6 +182,9 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
         )
     }
 
+    /**
+     * API for update dog
+     */
     private fun requestForEditDog() {
         val call: Call<JsonElement> =
             BaseApplication.instance?.wsClientListener!!.updateDog(getRequestBodyObject())
@@ -157,6 +196,10 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
         )
     }
 
+
+    /**
+     * making api request data formatted
+     */
     private fun getRequestBodyObject(): RequestBody {
         val jsonObjectReq = JSONObject()
         try {
@@ -179,6 +222,9 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
         return StaticUtils.getRequestBodyJson(jsonObjectReq)
     }
 
+    /**
+     * Success response parsing
+     */
     override fun onSuccess(code: Int, response: JsonElement?) {
         when (code) {
             WSUtils.REQ_FOR_ADD_DOG -> {
@@ -194,11 +240,16 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
         }
     }
 
-
+    /**
+     * Error response parsing
+     */
     override fun onError(code: Int, error: String?) {
         StaticUtils.showToast(mainActivity, error)
     }
 
+    /**
+     * No network
+     */
     override fun onNoNetwork(code: Int) {
         StaticUtils.showToast(mainActivity, "Please check your internet connection")
     }

@@ -62,5 +62,6 @@
     <string name="complete_booking">Complete Booking</string>
     <string name="confirm_booking">Confirm Booking</string>
     <string name="select_booking_date">Select Booking Date</string>
+    <string name="delete_dog">Delete Dog</string>
 
 </resources>

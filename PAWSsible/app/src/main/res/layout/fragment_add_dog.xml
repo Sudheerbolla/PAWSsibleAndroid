@@ -222,14 +222,32 @@
 
             </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnAdd"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linContent"
                 android:layout_marginTop="@dimen/ten_dp"
                 android:layout_marginBottom="@dimen/ten_dp"
-                android:text="@string/add_dog" />
+                android:orientation="horizontal"
+                android:padding="@dimen/five_dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/three_dp"
+                    android:layout_weight="1"
+                    android:text="@string/add_dog" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/three_dp"
+                    android:layout_weight="1"
+                    android:text="@string/delete_dog" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
