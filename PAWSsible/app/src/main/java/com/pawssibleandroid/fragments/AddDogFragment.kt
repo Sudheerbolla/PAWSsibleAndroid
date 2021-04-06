@@ -104,6 +104,7 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
                 e.printStackTrace()
             }
             fragmentAddDogBinding!!.btnAdd.setText(R.string.submit_changes)
+            fragmentAddDogBinding!!.btnDelete.setText(if (dogModel!!.active) R.string.delete_dog else R.string.activate_dog)
         }
     }
 
@@ -157,7 +158,7 @@ class AddDogFragment : Fragment(), View.OnClickListener, IParseListener<JsonElem
      */
     private fun deleteDog() {
         assignDog()
-        dogModel?.active = false
+        dogModel?.active = dogModel?.active?.not()!!
         val call: Call<JsonElement> =
             BaseApplication.instance?.wsClientListener!!.updateDog(getRequestBodyObject())
         WSCallBacksListener().requestForJsonObject(
